@@ -125,6 +125,7 @@
 
 <body>
 <section>
+	<!-- Carousel Section -->
 	<div id="ecomHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 		<!-- Indicators -->
 		<div class="carousel-indicators">
@@ -138,12 +139,12 @@
 			<!-- Slide 1 -->
 			<div class="carousel-item active">
 				<div class="hero-image-overlay"></div>
-				<img src="img/ecom1.jpeg" class="d-block w-100" alt="Slide 1" style="height: 600px; object-fit: cover;">
+				<img src="img/ecom4.jpg" class="d-block w-100" alt="Slide 1" style="height: 600px; object-fit: cover;">
 				<div class="carousel-caption">
 					<div class="hero-content animate__animated animate__fadeInDown">
-						<span class="badge bg-primary mb-3">New Season</span>
-						<h2 class="display-4 fw-bold">Summer Collection 2023</h2>
-						<p class="lead">Discover our fresh new arrivals designed for your perfect summer</p>
+						<span class="badge bg-primary mb-3">Ultimate Drop</span>
+						<h2 class="display-4 fw-bold">2025 Must-Haves</h2>
+						<p class="lead">From sleek tech to bold fashion, shop the collection that defines the year</p>
 						<div class="mt-4 d-flex justify-content-center gap-3">
 							<a href="/products" class="btn btn-primary">Shop Collection</a>
 							<a href="#trending" class="btn btn-outline-light">View Trends</a>
@@ -155,12 +156,12 @@
 			<!-- Slide 2 -->
 			<div class="carousel-item">
 				<div class="hero-image-overlay"></div>
-				<img src="img/ecom3.jpg" class="d-block w-100" alt="Slide 2" style="height: 600px; object-fit: cover;">
+				<img src="img/ecom6.jpg" class="d-block w-100" alt="Slide 2" style="height: 600px; object-fit: cover;">
 				<div class="carousel-caption">
 					<div class="hero-content animate__animated animate__fadeInDown">
-						<span class="badge bg-danger mb-3">Flash Sale</span>
-						<h2 class="display-4 fw-bold">Up to 50% OFF</h2>
-						<p class="lead">Our biggest sale of the year ends soon - don't miss out!</p>
+						<span class="badge bg-danger mb-3">Crazy Discounts</span>
+						<h2 class="display-4 fw-bold">Up to 80% OFF</h2>
+						<p class="lead">Don't wait?score epic deals across all categories before they're gone!</p>
 						<a href="/products?discount=true" class="btn btn-warning mt-3">Shop Deals</a>
 					</div>
 				</div>
@@ -169,12 +170,12 @@
 			<!-- Slide 3 -->
 			<div class="carousel-item">
 				<div class="hero-image-overlay"></div>
-				<img src="img/ecom2.jpg" class="d-block w-100" alt="Slide 3" style="height: 600px; object-fit: cover;">
+				<img src="img/ecom5.jpg" class="d-block w-100" alt="Slide 3" style="height: 600px; object-fit: cover;">
 				<div class="carousel-caption">
 					<div class="hero-content animate__animated animate__fadeInDown">
-						<span class="badge bg-success mb-3">Just In</span>
-						<h2 class="display-4 fw-bold">Fresh Arrivals Weekly</h2>
-						<p class="lead">Stay ahead with our latest collection drops and trends</p>
+						<span class="badge bg-success mb-3">Daily Vibes</span>
+						<h2 class="display-4 fw-bold">New Gear Every Day</h2>
+						<p class="lead">Stay fresh with our latest drops, from gadgets to style, made for 2025</p>
 						<a href="/products?new=true" class="btn btn-primary mt-3">Explore Now</a>
 					</div>
 				</div>
@@ -190,61 +191,15 @@
 		</button>
 	</div>
 
-	<!-- Category Module -->
-	<div class="container" id="categories">
+	<!-- Category Module - Now matches product styling -->
+	<div class="container-fluid bg-light p-3" id="categories">
 		<div class="row">
-			<p class="text-center fs-4">Category</p>
-			<div class="col-md-2" th:each="c:${category}">
-				<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+			<p class="text-center fs-4">Categories</p>
+			<div class="col-md-3" th:each="c:${category}">
+				<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
 					<div class="card-body text-center">
-						<img th:src="@{'img/category_img/'+${c.imageName}}" width="65%" height="140px"><br>
-						<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none">[[${c.name}]]</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2">
-    <div
-        class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
-        <div class="card-body text-center">
-            <img src="img/category_img/beuty.png" width="65%" height="140px">
-            <p>Beauty</p>
-        </div>
-    </div>
-</div>
-			<div class="col-md-2">
-				<div
-						class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
-					<div class="card-body text-center">
-						<img src="img/category_img/pant.png" width="65%" height="140px">
-						<p>Clothes</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div
-						class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
-					<div class="card-body text-center">
-						<img src="img/category_img/laptop.jpg" width="65%" height="140px">
-						<p>Laptop</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div
-						class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
-					<div class="card-body text-center">
-						<img src="img/category_img/mobile.png" width="65%" height="140px">
-						<p>Mobile</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div
-						class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
-					<div class="card-body text-center">
-						<img src="img/category_img/groccery.jpg" width="65%"
-							 height="140px">
-						<p>Grocery</p>
+						<img th:src="@{'img/category_img/'+${c.imageName}}" class="" width="65%" height="140px">
+						<p class="text-center"><a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none">[[${c.name}]]</a></p>
 					</div>
 				</div>
 			</div>
@@ -260,35 +215,6 @@
 					<div class="card-body text-center">
 						<img alt="" th:src="@{'img/product_img/'+${p.image}}" class="" width="65%" height="140px">
 						<p class="text-center"><a th:href="@{'/product/'+${p.id}}" class="text-decoration-none">[[${p.title}]]</a></p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-					<div class="card-body text-center">
-						<img alt="" src="img/product_img/laptop.jpg" class="" width="65%"
-							 height="140px">
-						<p class="text-center">HP Laptop</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-					<div class="card-body text-center">
-						<img alt="" src="img/product_img/laptop.jpg" class="" width="65%"
-							 height="140px">
-						<p class="text-center">HP Laptop</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-					<div class="card-body text-center">
-						<img alt="" src="img/product_img/laptop.jpg" class="" width="65%"
-							 height="140px">
-						<p class="text-center">HP Laptop</p>
 					</div>
 				</div>
 			</div>
@@ -336,7 +262,5 @@
         });
     });
 </script>
-
-
 </body>
 </html>
